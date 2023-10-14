@@ -73,7 +73,9 @@ function MainContent() {
         </div>
         <button
           className="downloadBtn"
-          onClick={() => exportComponentAsJPEG(memeRef)}
+          onClick={() =>
+            exportComponentAsJPEG(memeRef, { fileName: "Hakona Matata" })
+          }
         >
           Download Image
         </button>
