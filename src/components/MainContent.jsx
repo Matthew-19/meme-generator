@@ -42,8 +42,8 @@ function MainContent() {
   return (
     <main>
       <div className="main--container">
-        <form className="main--form">
-          <div className="input-text-container">
+        <div className="main--form">
+          <div className="main--input-container">
             <input
               className="main--input"
               type="text"
@@ -61,24 +61,29 @@ function MainContent() {
               onChange={handleChange}
             />
           </div>
-          <button className="get-meme-btn" onClick={getMeme}>
-            Get a new meme image 🖼
-          </button>
-        </form>
+          <div className="main--form-buttons">
+            <button className="get-meme-btn" onClick={getMeme}>
+              Get a new meme image 🖼
+            </button>
+            <button
+              className="downloadBtn"
+              onClick={() =>
+                exportComponentAsJPEG(memeRef, {
+                  fileName: "Hakona Matata",
+                  html2CanvasOptions: { scale: 2 },
+                })
+              }
+            >
+              Download
+            </button>
+          </div>
+        </div>
 
         <div className="meme" ref={memeRef}>
           <img src={meme.randomImage} alt="MemeImg" className="memeImg" />
           <p className="meme--text top">{meme.topText}</p>
           <p className="meme--text bottom">{meme.bottomText}</p>
         </div>
-        <button
-          className="downloadBtn"
-          onClick={() =>
-            exportComponentAsJPEG(memeRef, { fileName: "Hakona Matata" })
-          }
-        >
-          Download Image
-        </button>
       </div>
     </main>
   );
