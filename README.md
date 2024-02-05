@@ -3,7 +3,7 @@ A React Project generating memes by fetching meme images using [Imgflip API](htt
 You can also download the image, with or without the text, with custom dimensions.
 
 ### Features
-📱 Fully Responsive
-💾 Download MEME as PNG
+- 📱 Fully Responsive
+- 💾 Download MEME as PNG
 
 ### Preview: https://matthew-19.github.io/meme-generator/
